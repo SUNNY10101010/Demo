@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Rental Planet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<style>
+    .body {
+        font-family: sans-serif;
+        text-decoration: none;
+    }
+    .navbar {
+        height: 80px;
+        width: 100%;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+        padding-top: 15px;
+        padding: 0px 20px;
+    }
+    .nav_logo {
+        height: 55px;
+        width: 100%;
+        padding: 0px 20px 0px 20px;
+    }
+    .nav_logo img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .nav_options {
+        width: 45%;
+        list-style-type: none;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav_options a {
+        color: #1896fe;
+        font-size: clamp(12px, 4vw, 18px);
+        font-weight: bold;
+    }
+
+    .nav_btn {
+        background-color: #1896fe;
+        font-size: 16px;
+        height: 40px;
+        width: 70px;
+        border-radius: 5px;
+    }
+
+    .nav_btn a {
+        color: white;
+    }
+
+
+    /* Page 1 */
+
+    .page_1 {
+        height: 60vh;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .page_1 h1 {
+        font-size: 60px;
+    }
+
+    .page_1 p {
+        font-size: 30px;
+    }
+
+    .page_1_img {
+        height: 524px;
+        margin-top: 200px;
+    }
+    .page_1_img img {
+        max-width: 100%;
+        max-height: 100%; 
+   }
+   .page_btn a {
+        margin: 20px;
+   }
+
+   
+
+   @media only screen and (max-width: 600px) {
+        .page_1 h1 {
+            font-size: 40px;
+        }
+        .page_1 p {
+            font-size: 18px;
+        }
+        .page_1_img {
+            height: 224px;
+            margin-top: 100px;
+        }
+        .page_1_img img {
+            max-width: 100%;
+            max-height: 100%; 
+        }
+        
+    }
+
+    @media only screen and (min-width: 600px) {
+        .page_1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+    }
+    .options div {
+        width: 280px;
+        height: fit-content;
+        
+    }
+    .sec_option div {
+        padding: 20px;
+    }
+    .sec_option h1 {
+        font-weight: bolder;
+        font-size: 45px;
+        margin-top: 100px;
+    }
+
+    .options h4{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    /* Section 3 */
+    .Sec_third {
+        background: linear-gradient(1turn, rgba(221, 218, 255, .3), rgba(255, 255, 255, 0) 90%);
+        flex-grow: 1;
+    }
+    .Sec_third h1 {
+        font-weight: bolder;
+        font-size: 40px;
+        margin-top: 100px;
+    }
+
+    .sec_third_p {
+        font-size: 20px;
+        color: #5c5776;
+    }
+
+
+    /* Section third */
+    .icons svg {
+        height: 40px;
+        width: 40px;
+        margin-bottom: 30px;
+        fill: #754ffe;
+        
+    }
+
+    .Sec_third_container {
+        padding: 50px 100px;
+    }
+
+    .Sec_third_pricing h6 {
+        font-size: 20px;
+        padding-top: 10px;
+    }
+
+    .Sec_third_pricing h5 {
+        font-size: 35px;
+    }
+    .Sec_third_pricing p {
+        padding-top: 10px;
+        padding-left: 5px;
+    }
+    .Sec_third_box {
+        background-color: #ffffff;
+        width: fit-content;
+        padding: 20px;
+        margin: 10px;
+    }
+    .Sec_third_box p {
+        color: #5c5776;
+    }
+    .Sec_third_box button {
+        padding: 10px 40px;
+        background-color: #754ffe;
+    }
+
+    .Second_box h2 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 20px;
+        padding-left: 15px;
+    }
+    .Second_box li {
+        color: #5c5776;
+    }
+    
+
+    /* Section fourth */
+    .Sec_fourth {
+        padding: 120px 0px;
+        background: linear-gradient(1turn, rgba(221, 218, 255, .3), rgba(255, 255, 255, 0) 80%);
+    }
+    .Sec_fourth h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .sec_fourth_Quetions {
+        padding: 50px;
+        background-color: #f5edff;
+        height: 400px;
+        margin: 80px 50px 0px 50px;
+        border-radius: 10px;
+        color: #5c5776;
+    }
+    .sec_fourth_Quetions p {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 30px;
+    }
+
+
+    /* section fifth */
+
+    .Sec_fifth {
+        padding: 120px 0px;
+    }
+
+
+    .Sec_fifth_heading h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .Sec_fifth_heading p {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+    .fifth_icons svg {
+        fill: #1896fe;
+    }
+    .svg_heading {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .Sec_fifth_elements {
+        width: 300px;
+        height: 100%;
+        margin: 50px 100px 50px 100px;
+    }
+
+
+
+    /* Footer */
+
+    .Contact_us {
+        box-shadow: -12px 12px 56px 10px rgba(16, 45, 94, 0.17);
+        margin: 60px 80px 60px 80px;
+        padding: 80px 20px;
+    }
+
+    .Contact_us_input {
+        opacity: 60%;
+        padding: 5px 15px;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+    }
+
+    .Contact_us_btn {
+        background-color: #102d5e;
+        width: 100%;
+    }
+    .Contact_us input {
+        width: 100%;
+        border: none; /* Remove default border */
+        outline: none; /* Remove outline on focus */
+    }
+    .margin {
+        margin: 10px 20px;
+    }
+    .margin_message {
+        height: 100px;
+    }
+
+
+    .copyright {
+        margin-left: 200px;
+    }
+
+</style>
+<body>
+    <section>
+        <div class="navbar">
+            <div class="nav_logo d-flex flex-row justify-content-between">
+                <img src="https://myrentalpanel.com/wp-content/uploads/2023/06/Dark-Red-Monoline-Letter-M-Logo-500-%C3%97-200px-400-%C3%97-100px-6-300x75.png" alt="logo">
+                <ul class="nav_options">
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <div class="d-flex flex-row align-items-center">
+                        <button class="nav_btn"><a href="#">Login</a></button>
+                    </div>
+                </ul>
+                <!-- <img src="https://www.svgrepo.com/show/532195/menu.svg"> -->
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="page_1">
+            <div>
+                <h1>Built better Future</h1>
+                <p>My Rental Panel Give your customers an easy-to-use website where they will place thousands of orders.</p>
+                <div class="page_btn">
+                    <a href="#"><button class="btn btn-primary btn-lg" type="submit">Get Started</button></a>
+                    <a href="#"><button class="btn btn-primary btn-lg" type="submit">See Demo</button></a>
+                </div>
+            </div>
+            <div class="page_1_img">
+                <img src="https://myrentalpanel.com/wp-content/uploads/2023/12/Minimalist-Website-Launch-Computer-Mockup-Instagram-Post-1-e1702188925886-1536x975.png">
+            </div>
+        </div>
+
+        <div class="sec_option">
+            <h1 class="d-flex flex-row justify-content-center">Why we are diffrent</h1>
+            <br>
+            <div class="options d-flex flex-row justify-content-evenly">
+                <div>
+                    <span class="icons">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg>
+                    </span>
+                    <span>
+                        <h4>Superb User Panel</h4>
+                        <p>Give your customers an easy-to-use website where they will place thousands of orders.</p>
+                    </span>
+                </div>
+                <div>
+                    <span class="icons">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"/></svg>
+                    </span>
+                    <h4>Various payment methods</h4>
+                    <p>Seamlessly integrate all payment methods that fit your needs.</p>
+                </div>
+                <div>
+                    <span class="icons">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M32 0C14.3 0 0 14.3 0 32S14.3 64 32 64V75c0 42.4 16.9 83.1 46.9 113.1L146.7 256 78.9 323.9C48.9 353.9 32 394.6 32 437v11c-17.7 0-32 14.3-32 32s14.3 32 32 32H64 320h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V437c0-42.4-16.9-83.1-46.9-113.1L237.3 256l67.9-67.9c30-30 46.9-70.7 46.9-113.1V64c17.7 0 32-14.3 32-32s-14.3-32-32-32H320 64 32zM288 437v11H96V437c0-25.5 10.1-49.9 28.1-67.9L192 301.3l67.9 67.9c18 18 28.1 42.4 28.1 67.9z"/></svg>
+                    </span>
+                    <h4>Efficient order processing</h4>
+                    <p>Connect as many APIs as you want for automated order processing.</p>
+                </div>
+                <div>
+                    <span class="icons">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 80c0 18-14.3 34.6-38.4 48c-29.1 16.1-72.5 27.5-122.3 30.9c-3.7-1.8-7.4-3.5-11.3-5C300.6 137.4 248.2 128 192 128c-8.3 0-16.4 .2-24.5 .6l-1.1-.6C142.3 114.6 128 98 128 80c0-44.2 86-80 192-80S512 35.8 512 80zM160.7 161.1c10.2-.7 20.7-1.1 31.3-1.1c62.2 0 117.4 12.3 152.5 31.4C369.3 204.9 384 221.7 384 240c0 4-.7 7.9-2.1 11.7c-4.6 13.2-17 25.3-35 35.5c0 0 0 0 0 0c-.1 .1-.3 .1-.4 .2l0 0 0 0c-.3 .2-.6 .3-.9 .5c-35 19.4-90.8 32-153.6 32c-59.6 0-112.9-11.3-148.2-29.1c-1.9-.9-3.7-1.9-5.5-2.9C14.3 274.6 0 258 0 240c0-34.8 53.4-64.5 128-75.4c10.5-1.5 21.4-2.7 32.7-3.5zM416 240c0-21.9-10.6-39.9-24.1-53.4c28.3-4.4 54.2-11.4 76.2-20.5c16.3-6.8 31.5-15.2 43.9-25.5V176c0 19.3-16.5 37.1-43.8 50.9c-14.6 7.4-32.4 13.7-52.4 18.5c.1-1.8 .2-3.5 .2-5.3zm-32 96c0 18-14.3 34.6-38.4 48c-1.8 1-3.6 1.9-5.5 2.9C304.9 404.7 251.6 416 192 416c-62.8 0-118.6-12.6-153.6-32C14.3 370.6 0 354 0 336V300.6c12.5 10.3 27.6 18.7 43.9 25.5C83.4 342.6 135.8 352 192 352s108.6-9.4 148.1-25.9c7.8-3.2 15.3-6.9 22.4-10.9c6.1-3.4 11.8-7.2 17.2-11.2c1.5-1.1 2.9-2.3 4.3-3.4V304v5.7V336zm32 0V304 278.1c19-4.2 36.5-9.5 52.1-16c16.3-6.8 31.5-15.2 43.9-25.5V272c0 10.5-5 21-14.9 30.9c-16.3 16.3-45 29.7-81.3 38.4c.1-1.7 .2-3.5 .2-5.3zM192 448c56.2 0 108.6-9.4 148.1-25.9c16.3-6.8 31.5-15.2 43.9-25.5V432c0 44.2-86 80-192 80S0 476.2 0 432V396.6c12.5 10.3 27.6 18.7 43.9 25.5C83.4 438.6 135.8 448 192 448z"/></svg>
+                    </span>
+                    <h4>Powerful admin panel</h4>
+                    <p>Control and manage your business. The admin panel has features you never knew you needed.</p>
+                </div>
+            </div>
+        </div>
+
+        <section id="section_Features">
+            <div class="sec_option">
+                <h1 class="d-flex flex-row justify-content-center">Features</h1>
+                <br>
+                <div class="options d-flex flex-row justify-content-evenly flex-nowrap">
+                    <div>
+                        <span class="icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M174.7 45.1C192.2 17 223 0 256 0s63.8 17 81.3 45.1l38.6 61.7 27-15.6c8.4-4.9 18.9-4.2 26.6 1.7s11.1 15.9 8.6 25.3l-23.4 87.4c-3.4 12.8-16.6 20.4-29.4 17l-87.4-23.4c-9.4-2.5-16.3-10.4-17.6-20s3.4-19.1 11.8-23.9l28.4-16.4L283 79c-5.8-9.3-16-15-27-15s-21.2 5.7-27 15l-17.5 28c-9.2 14.8-28.6 19.5-43.6 10.5c-15.3-9.2-20.2-29.2-10.7-44.4l17.5-28zM429.5 251.9c15-9 34.4-4.3 43.6 10.5l24.4 39.1c9.4 15.1 14.4 32.4 14.6 50.2c.3 53.1-42.7 96.4-95.8 96.4L320 448v32c0 9.7-5.8 18.5-14.8 22.2s-19.3 1.7-26.2-5.2l-64-64c-9.4-9.4-9.4-24.6 0-33.9l64-64c6.9-6.9 17.2-8.9 26.2-5.2s14.8 12.5 14.8 22.2v32l96.2 0c17.6 0 31.9-14.4 31.8-32c0-5.9-1.7-11.7-4.8-16.7l-24.4-39.1c-9.5-15.2-4.7-35.2 10.7-44.4zm-364.6-31L36 204.2c-8.4-4.9-13.1-14.3-11.8-23.9s8.2-17.5 17.6-20l87.4-23.4c12.8-3.4 26 4.2 29.4 17L182 241.2c2.5 9.4-.9 19.3-8.6 25.3s-18.2 6.6-26.6 1.7l-26.5-15.3L68.8 335.3c-3.1 5-4.8 10.8-4.8 16.7c-.1 17.6 14.2 32 31.8 32l32.2 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-32.2 0C42.7 448-.3 404.8 0 351.6c.1-17.8 5.1-35.1 14.6-50.2l50.3-80.5z"/></svg>
+                        </span>
+                        <h4>Refill</h4>
+                        <p>An order refill can be performed by a provider or manually, paid refills are also available.</p>
+                    </div>
+                    <div>
+                        <span class="icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M142.9 142.9c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5c0 0 0 0 0 0H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5c7.7-21.8 20.2-42.3 37.8-59.8zM16 312v7.6 .7V440c0 9.7 5.8 18.5 14.8 22.2s19.3 1.7 26.2-5.2l41.6-41.6c87.6 86.5 228.7 86.2 315.8-1c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.2 62.2-162.7 62.5-225.3 1L185 329c6.9-6.9 8.9-17.2 5.2-26.2s-12.5-14.8-22.2-14.8H48.4h-.7H40c-13.3 0-24 10.7-24 24z"/></svg>
+                        </span>
+                        <h4>Sync with providers</h4>
+                        <p>Sync rates, min & max limits, statuses with providers that use our platform.</p>
+                    </div>
+                    <div>
+                        <span class="icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z"/></svg>
+                        </span>
+                        <h4>2FA</h4>
+                        <p>2FA, is an extra layer of protection used to ensure the security of online accounts beyond just a username and password.</p>
+                    </div>
+                    <div>
+                        <span class="icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M96 0C78.3 0 64 14.3 64 32v96h64V32c0-17.7-14.3-32-32-32zM288 0c-17.7 0-32 14.3-32 32v96h64V32c0-17.7-14.3-32-32-32zM32 160c-17.7 0-32 14.3-32 32s14.3 32 32 32v32c0 77.4 55 142 128 156.8V480c0 17.7 14.3 32 32 32s32-14.3 32-32V412.8C297 398 352 333.4 352 256V224c17.7 0 32-14.3 32-32s-14.3-32-32-32H32z"/></svg>
+                        </span>
+                        <h4>Unlimited providers</h4>
+                        <p>You can connect as many providers as you want, we don't charge extra for that.</p>
+                    </div>
+                </div>
+                <div class="options d-flex flex-row justify-content-evenly flex-nowrap">
+                    <div>
+                        <span class="icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M80.3 44C69.8 69.9 64 98.2 64 128s5.8 58.1 16.3 84c6.6 16.4-1.3 35-17.7 41.7s-35-1.3-41.7-17.7C7.4 202.6 0 166.1 0 128S7.4 53.4 20.9 20C27.6 3.6 46.2-4.3 62.6 2.3S86.9 27.6 80.3 44zM555.1 20C568.6 53.4 576 89.9 576 128s-7.4 74.6-20.9 108c-6.6 16.4-25.3 24.3-41.7 17.7S489.1 228.4 495.7 212c10.5-25.9 16.3-54.2 16.3-84s-5.8-58.1-16.3-84C489.1 27.6 497 9 513.4 2.3s35 1.3 41.7 17.7zM352 128c0 23.7-12.9 44.4-32 55.4V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V183.4c-19.1-11.1-32-31.7-32-55.4c0-35.3 28.7-64 64-64s64 28.7 64 64zM170.6 76.8C163.8 92.4 160 109.7 160 128s3.8 35.6 10.6 51.2c7.1 16.2-.3 35.1-16.5 42.1s-35.1-.3-42.1-16.5c-10.3-23.6-16-49.6-16-76.8s5.7-53.2 16-76.8c7.1-16.2 25.9-23.6 42.1-16.5s23.6 25.9 16.5 42.1zM464 51.2c10.3 23.6 16 49.6 16 76.8s-5.7 53.2-16 76.8c-7.1 16.2-25.9 23.6-42.1 16.5s-23.6-25.9-16.5-42.1c6.8-15.6 10.6-32.9 10.6-51.2s-3.8-35.6-10.6-51.2c-7.1-16.2 .3-35.1 16.5-42.1s35.1 .3 42.1 16.5z"/></svg>
+                        </span>
+                        <h4>Broadcast</h4>
+                        <p>Help admins keep up with user actions, latest updates, new features and more.</p>
+                    </div>
+                    <div>
+                        <span class="icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M160 0c17.7 0 32 14.3 32 32V67.7c1.6 .2 3.1 .4 4.7 .7c.4 .1 .7 .1 1.1 .2l48 8.8c17.4 3.2 28.9 19.9 25.7 37.2s-19.9 28.9-37.2 25.7l-47.5-8.7c-31.3-4.6-58.9-1.5-78.3 6.2s-27.2 18.3-29 28.1c-2 10.7-.5 16.7 1.2 20.4c1.8 3.9 5.5 8.3 12.8 13.2c16.3 10.7 41.3 17.7 73.7 26.3l2.9 .8c28.6 7.6 63.6 16.8 89.6 33.8c14.2 9.3 27.6 21.9 35.9 39.5c8.5 17.9 10.3 37.9 6.4 59.2c-6.9 38-33.1 63.4-65.6 76.7c-13.7 5.6-28.6 9.2-44.4 11V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V445.1c-.4-.1-.9-.1-1.3-.2l-.2 0 0 0c-24.4-3.8-64.5-14.3-91.5-26.3c-16.1-7.2-23.4-26.1-16.2-42.2s26.1-23.4 42.2-16.2c20.9 9.3 55.3 18.5 75.2 21.6c31.9 4.7 58.2 2 76-5.3c16.9-6.9 24.6-16.9 26.8-28.9c1.9-10.6 .4-16.7-1.3-20.4c-1.9-4-5.6-8.4-13-13.3c-16.4-10.7-41.5-17.7-74-26.3l-2.8-.7 0 0C119.4 279.3 84.4 270 58.4 253c-14.2-9.3-27.5-22-35.8-39.6c-8.4-17.9-10.1-37.9-6.1-59.2C23.7 116 52.3 91.2 84.8 78.3c13.3-5.3 27.9-8.9 43.2-11V32c0-17.7 14.3-32 32-32z"/></svg>
+                        </span>
+                        <h4>Accept online payments</h4>
+                        <p>Panel accepts bills via paypal, skrill, Auto Paytm, bitcoins and other crypto currency.</p>
+                    </div>
+                    <div>
+                        <span class="icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"/></svg>
+                        </span>
+                        <h4>Activity log</h4>
+                        <p>Lets you see what your staff are doing.</p>
+                    </div>
+                    <div>
+                        <span class="icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M168.5 72L256 165l87.5-93h-175zM383.9 99.1L311.5 176h129L383.9 99.1zm50 124.9H256 78.1L256 420.3 433.9 224zM71.5 176h129L128.1 99.1 71.5 176zm434.3 40.1l-232 256c-4.5 5-11 7.9-17.8 7.9s-13.2-2.9-17.8-7.9l-232-256c-7.7-8.5-8.3-21.2-1.5-30.4l112-152c4.5-6.1 11.7-9.8 19.3-9.8H376c7.6 0 14.8 3.6 19.3 9.8l112 152c6.8 9.2 6.1 21.9-1.5 30.4z"/></svg>
+                        </span>
+                        <h4>Template Selector</h4>
+                        <p>Available so many awesome themes.</p>
+                    </div>
+                </div>
+                <div class="options d-flex flex-row justify-content-evenly flex-nowrap">
+                    <div>
+                        <span class="icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M313.6 474.6h-1a158.1 158.1 0 0 1 0-316.2c94.9 0 168.2 83.1 157 176.6 4 5.1 8.2 9.6 11.2 15.3 13.4-30.3 20.3-62.4 20.3-97.7C501.1 117.5 391.6 8 256.5 8S12 117.5 12 252.6s109.5 244.6 244.5 244.6a237.4 237.4 0 0 0 70.4-10.1c-5.2-3.5-8.9-8.1-13.3-12.5zm-.1-.1l.4 .1zm78.4-168.9a99.2 99.2 0 1 0 99.2 99.2 99.2 99.2 0 0 0 -99.2-99.2z"/></svg>
+                        </span>
+                        <h4>User API</h4>
+                        <p>Easy-to-integrate API for your customers.</p>
+                    </div>
+                    <div>
+                        <span class="icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H512c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H512c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zm96 64a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm104 0c0-13.3 10.7-24 24-24H448c13.3 0 24 10.7 24 24s-10.7 24-24 24H224c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24H448c13.3 0 24 10.7 24 24s-10.7 24-24 24H224c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24H448c13.3 0 24 10.7 24 24s-10.7 24-24 24H224c-13.3 0-24-10.7-24-24zm-72-64a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM96 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></svg>
+                        </span>
+                        <h4>Mass orders</h4>
+                        <p>Lets set up mass orders for bulk delivery to save time.</p>
+                    </div>
+                    <div>
+                        <span class="icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/></svg>
+                        </span>
+                        <h4>Email address confirmation</h4>
+                        <p>Enable mandatory email address confirmation for users after signing up.</p>
+                    </div>
+                    <div>
+                        <span class="icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M312 24V34.5c6.4 1.2 12.6 2.7 18.2 4.2c12.8 3.4 20.4 16.6 17 29.4s-16.6 20.4-29.4 17c-10.9-2.9-21.1-4.9-30.2-5c-7.3-.1-14.7 1.7-19.4 4.4c-2.1 1.3-3.1 2.4-3.5 3c-.3 .5-.7 1.2-.7 2.8c0 .3 0 .5 0 .6c.2 .2 .9 1.2 3.3 2.6c5.8 3.5 14.4 6.2 27.4 10.1l.9 .3c11.1 3.3 25.9 7.8 37.9 15.3c13.7 8.6 26.1 22.9 26.4 44.9c.3 22.5-11.4 38.9-26.7 48.5c-6.7 4.1-13.9 7-21.3 8.8V232c0 13.3-10.7 24-24 24s-24-10.7-24-24V220.6c-9.5-2.3-18.2-5.3-25.6-7.8c-2.1-.7-4.1-1.4-6-2c-12.6-4.2-19.4-17.8-15.2-30.4s17.8-19.4 30.4-15.2c2.6 .9 5 1.7 7.3 2.5c13.6 4.6 23.4 7.9 33.9 8.3c8 .3 15.1-1.6 19.2-4.1c1.9-1.2 2.8-2.2 3.2-2.9c.4-.6 .9-1.8 .8-4.1l0-.2c0-1 0-2.1-4-4.6c-5.7-3.6-14.3-6.4-27.1-10.3l-1.9-.6c-10.8-3.2-25-7.5-36.4-14.4c-13.5-8.1-26.5-22-26.6-44.1c-.1-22.9 12.9-38.6 27.7-47.4c6.4-3.8 13.3-6.4 20.2-8.2V24c0-13.3 10.7-24 24-24s24 10.7 24 24zM568.2 336.3c13.1 17.8 9.3 42.8-8.5 55.9L433.1 485.5c-23.4 17.2-51.6 26.5-80.7 26.5H192 32c-17.7 0-32-14.3-32-32V416c0-17.7 14.3-32 32-32H68.8l44.9-36c22.7-18.2 50.9-28 80-28H272h16 64c17.7 0 32 14.3 32 32s-14.3 32-32 32H288 272c-8.8 0-16 7.2-16 16s7.2 16 16 16H392.6l119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 384l0 0-.9 0c.3 0 .6 0 .9 0z"/></svg>
+                        </span>
+                        <h4>Currency conversion</h4>
+                        <p>We offer payment options that are available for conversion from other currencies</p>
+                    </div>
+                </div>
+                <div class="options d-flex flex-row justify-content-evenly flex-nowrap">
+                    <div>
+                        <span class="icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg>
+                        </span>
+                        <h4>Deny duplicates</h4>
+                        <p>Prohibits users from placing multiple orders that contain the same link.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="section_pricing">
+        <div class="Sec_third">
+            <h1 class="d-flex flex-row justify-content-center">Pricing Plan</h1>
+            <p class="sec_third_p d-flex flex-row justify-content-center">An overall remedy for reselling.</p>
+            <div class="Sec_third_container d-flex flex-row justify-content-evenly">
+                <div class="Sec_third_box">
+                    <div class="d-flex flex-row justify-content-center">
+                        <span">
+                            <h4 class="d-flex flex-row justify-content-center">Plan A</h4>
+                            <p class="d-flex flex-row justify-content-center">Baby Panel</p>
+                        </span>
+                        <span class="Sec_third_pricing d-flex flex-row justify-content-center">
+                            <h6>$</h6>
+                            <h5>5</h5>
+                            <p>/Monthly</p>
+                        </span>
+                        <span>
+                            <a href="#"><button class="btn btn-primary">Click Here</button></a>
+                        </span>
+                    </div>
+                    <hr>
+                    <div class="Second_box">
+                        <h2>All core feature, including:</h2>
+                        <ul>
+                            <li>0 - 1000 order</li>
+                            <li>Unlimited Api</li>
+                            <li>7 Themes</li>
+                            <li>Site SEO</li>
+                            <li>Daily Backup</li>
+                            <li>Weekly Update</li>
+                            <li>Secure Hosting</li>
+                            <li>24/7 Customer Support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="Sec_third_box">
+                    <div class="d-flex flex-row justify-content-center">
+                        <span">
+                            <h4 class="d-flex flex-row justify-content-center">Plan A</h4>
+                            <p class="d-flex flex-row justify-content-center">Baby Panel</p>
+                        </span>
+                        <span class="Sec_third_pricing d-flex flex-row justify-content-center">
+                            <h6>$</h6>
+                            <h5>10</h5>
+                            <p>/Monthly</p>
+                        </span>
+                        <span>
+                            <a href="#"><button class="btn btn-primary">Click Here</button></a>
+                        </span>
+                    </div>
+                    <hr>
+                    <div class="Second_box">
+                        <h2>All core feature, including:</h2>
+                        <ul>
+                            <li>Unlimited Order</li>
+                            <li>Unlimited Api</li>
+                            <li>25+ Themes</li>
+                            <li>Site SEO</li>
+                            <li>Daily Backup</li>
+                            <li>Weekly Update</li>
+                            <li>Secure Hosting</li>
+                            <li>24/7 Customer Support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="Sec_third_box">
+                    <div class="d-flex flex-row justify-content-center">
+                        <span">
+                            <h4 class="d-flex flex-row justify-content-center">Plan A</h4>
+                            <p class="d-flex flex-row justify-content-center">Baby Panel</p>
+                        </span>
+                        <span class="Sec_third_pricing d-flex flex-row justify-content-center">
+                            <h6>$</h6>
+                            <h5>50</h5>
+                            <p>/Monthly</p>
+                        </span>
+                        <span>
+                            <a href="#"><button class="btn btn-primary">Click Here</button></a>
+                        </span>
+                    </div>
+                    <hr>
+                    <div class="Second_box">
+                        <h2>All core feature, including:</h2>
+                        <ul>
+                            <li>15 Rental Panel</li>
+                            <li>Unlimited order</li>
+                            <li>Unlimited Api</li>
+                            <li>All Themes</li>
+                            <li>Daily Backup</li>
+                            <li>Weekly Update</li>
+                            <li>Secure Hosting</li>
+                            <li>24/7 Customer Support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="Sec_third_box">
+                    <div class="d-flex flex-row justify-content-center">
+                        <span">
+                            <h4 class="d-flex flex-row justify-content-center">Plan A</h4>
+                            <p class="d-flex flex-row justify-content-center">Baby Panel</p>
+                        </span>
+                        <span class="Sec_third_pricing d-flex flex-row justify-content-center">
+                            <h6>$</h6>
+                            <h5>7</h5>
+                            <p>/Monthly</p>
+                        </span>
+                        <span>
+                            <a href="#"><button class="btn btn-primary">Click Here</button></a>
+                        </span>
+                    </div>
+                    <hr>
+                    <div class="Second_box">
+                        <h2>All core feature, including:</h2>
+                        <ul>
+                            <li>Unlimited order</li>
+                            <li>1 Api</li>
+                            <li>5 Themes</li>
+                            <li>Site SEO</li>
+                            <li>Daily Backup</li>
+                            <li>Weekly Update</li>
+                            <li>Secure Hosting</li>
+                            <li>24/7 Customer Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="Sec_fourth">
+            <div class="d-flex flex-row justify-content-center"><h1>F.A.Q</h1></div>
+            <div class="sec_fourth_Quetions">
+               <span>
+                    <p>Is there a setup fee?</p>
+                    <p>Do i need to use my own domain name?</p>
+                    <p>Do i need a web host?</p>
+                    <p>Do you sell followers or likes?</p>
+               </span>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="Sec_fifth">
+            <span class="d-flex flex-row justify-content-center">
+                <div class="Sec_fifth_heading">
+                    <h1>Contact Us</h1>
+                    <p>SAY HELLO! ----------</p>
+                </div>
+            </span>
+            <div class="d-flex flex-row justify-content-between">
+                <div class="Sec_fifth_elements">
+                    <span class="icons fifth_icons d-flex flex-row justify-content-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z"/></svg>
+                    </span>
+                    <h5 class="d-flex justify-content-center">Uttar Pradesh</h5>
+                    <p class="d-flex flex-row justify-content-center">VIP City 2, D-37, Sadallapur, GR. NOIDA</p>
+                </div>
+                <div class="Sec_fifth_elements">
+                    <span class="icons fifth_icons d-flex flex-row justify-content-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z"/></svg>
+                    </span>
+                    <h5 class="d-flex flex-row justify-content-center">Email:</h5>
+                    <p class="d-flex flex-row justify-content-center">support@myrentalpanel.com</p>
+                </div>
+                <div class="Sec_fifth_elements">
+                    <span class="icons fifth_icons d-flex flex-row justify-content-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 80c8.8 0 16 7.2 16 16V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16H512zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM208 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16H304c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80H176zM376 144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24H376z"/></svg>
+                    </span>
+                    <h5 class="d-flex flex-row justify-content-center">Phone:</h5>
+                    <p class="d-flex flex-row justify-content-center">8210****18</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="Contact_us">
+            <div class="Contact_us_input margin">
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="Contact_us_input margin">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="Contact_us_input margin margin_message">
+                <input type="text" placeholder="Message">
+            </div>
+            <div>
+                <button class="Contact_us_btn btn btn-primary">Submit Your Message</button>
+            </div>
+        </div>
+    </footer>
+    <div class="d-flex flex-row justify-content-between">
+        <div class="copyright">
+            <p>Copyright © 2024 My Rental Panel | Powered by My Rental Panel</p>
+        </div>
+        <div class="d-flex flex-row justify-content-end">
+            <pre>Terms of Service | Privacy Policy</pre>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+</html>
